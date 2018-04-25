@@ -20,8 +20,11 @@
     <script>
         $(function () {
             var socket = io();
+            var json_obj = [];
             socket.on('EVENT_LOG', function(msg){
-              $('#messages').append($('<pre>').text(msg));
+              console.log(msg);
+              //json_obj.push(JSON.parse(msg));
+              //$('#messages').append($('<pre>').text(msg));
             });
         });
     </script>
